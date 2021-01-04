@@ -1,0 +1,16 @@
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ./data/custom/train_sd.txt
+val: ./data/custom/val_sd.txt
+#inf: ./data/custom/evaluation_sd.txt
+#val: ./data/custom/evaluation_sd.txt
+
+# number of classes
+nc: 39
+
+# class names
+names: ['Aerosol','Alcohol','Awl','Axe','Bat','Battery','Bullet','Firecracker',
+        'Gun','GunParts','Hammer','HandCuffs','HDD','Knife','Laptop','Lighter',
+        'Liquid','Match','MetalPipe','NailClippers','PrtableGas','Saw','Scissors',
+        'Screwdriver','SmartPhone','SolidFuel','Spanner','SSD','SupplymentaryBattery',
+        'TabletPC','Thinner','USB','ZippoOil','Plier','Chisel','Electronic cigarettes',
+        'Electronic cigarettes(Liquid)','stun gun','Throwing Knife']
