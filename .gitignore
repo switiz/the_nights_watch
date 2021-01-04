@@ -38,6 +38,7 @@ output/*
 wandb/*
 result/*
 weights/*
+!weights/yolov5m.pt
 
 pycocotools/*
 results*.txt
