@@ -60,6 +60,9 @@ def check_dir(path):
     elif path =='new_c':
         images_dir_path = 'C:/Local/Train'
         json_file_path = 'E:/Project/coco_rapiscan_change.json'
+    elif path == 'eval_c':
+        images_dir_path = 'C:/Local/Eval/Data'
+        json_file_path = 'E:/Project/coco_eval_rapiscan_change.json'
     elif path == 'eval_e':
         images_dir_path = 'E:/Project/Eval'
         json_file_path = 'E:/Project/coco_eval_rapiscan_change.json'

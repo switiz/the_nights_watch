@@ -100,7 +100,7 @@ def check_anchors(dataset, model, thr=4.0, imgsz=640):
 
     bpr, aat = metric(m.anchor_grid.clone().cpu().view(-1, 2))
     print('anchors/target = %.2f, Best Possible Recall (BPR) = %.4f' % (aat, bpr), end='')
-    if bpr < 0.98:  # threshold to recompute
+    if bpr < 0.999:  # threshold to recompute
         print('. Attempting to generate improved anchors, please wait...' % bpr)
         na = m.anchor_grid.numel() // 2  # number of anchors
         new_anchors = kmean_anchors(dataset, n=na, img_size=imgsz, thr=thr, gen=1000, verbose=False)
@@ -498,7 +498,7 @@ def compute_loss(p, targets, model):  # predictions, targets, model
     # Losses
     nt = 0  # number of targets
     np = len(p)  # number of outputs
-    balance = [4.0, 1.0, 0.4] if np == 3 else [4.0, 1.0, 0.4, 0.1]  # P3-5 or P3-6
+    balance = [4.0, 1.0, 0.4] if np == 3 else [1.0, 4.0, 1, 0.4, 0.1]  # P3-5 or P3-6
     for i, pi in enumerate(p):  # layer index, layer predictions
         b, a, gj, gi = indices[i]  # image, anchor, gridy, gridx
         tobj = torch.zeros_like(pi[..., 0], device=device)  # target obj
