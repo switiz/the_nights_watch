@@ -1,7 +1,7 @@
 
 # YOLO v5 Xray object detection (한글 프로젝트)
 
-- 연세대학교 인공지능 대학원 AiHub dataset을 이용한 Xray object detection 프로젝트의 결과  
+- AiHub dataset을 이용한 연세대학교 인공지능 대학원 Xray object detection 프로젝트  
 - Fork from yolov5 : https://github.com/ultralytics/yolov5  
 ----
 
