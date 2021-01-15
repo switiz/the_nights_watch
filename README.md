@@ -1,33 +1,34 @@
-#YOLO v5 Xray object detection (ÇÑ±Û ÇÁ·ÎÁ§Æ®)
 
-- ¿¬¼¼´ëÇÐ±³ ÀÎ°øÁö´É ´ëÇÐ¿ø AiHub datasetÀ» ÀÌ¿ëÇÑ Xray object detection ÇÁ·ÎÁ§Æ®ÀÇ °á°ú  
+# YOLO v5 Xray object detection (í•œê¸€ í”„ë¡œì íŠ¸)
 
+- ì—°ì„¸ëŒ€í•™êµ ì¸ê³µì§€ëŠ¥ ëŒ€í•™ì› AiHub datasetì„ ì´ìš©í•œ Xray object detection í”„ë¡œì íŠ¸ì˜ ê²°ê³¼  
+- Fork from yolov5 : https://github.com/ultralytics/yolov5  
 ----
 
-##¸ñÀû 
+## ëª©ì 
 
-- ´ëÇÐ¿ø¿¡¼­ ÇÁ·ÎÁ§Æ®¸¦ ¼öÇàÇÏ¸ç YOLO ¾Ë°í¸®ÁòÀ» ¸®¼­Ä¡¸¦ ÇÑ °á°ú ±¹³» ÀÚ·á ¼ö ÀÚÃ¼°¡ ¸¹Áö ¾Ê°í ÀÖ´Ù ÇÏ´õ¶óµµ ÀÚ·á°¡ °ú°ÅÀÇ ¹öÀü¿¡ ¸Ó¹°·¯ ÀÖ½À´Ï´Ù.    
-
-
-- ¿Ü±¹ÀÇ ÀÚ·áµé ¿ª½Ã ÇöÀç ¹öÀü¿¡¼­ µ¿ÀÛÇÏ´Â ÀÚ·á°¡ ¸¹Áö ¾Ê°í ÆÄÆíÈ­µÇ¾îÀÖ¾î ÇØ´ç git repo¸¦ ÅëÇØ ÀÚ·á¸¦ ÅëÇÕÇÏ¿© Á¦°øÇÏ´Â °Í¿¡ 1Â÷ ¸ñÀûÀ» µÎ°íÀÚ ÇÕ´Ï´Ù.   
+- ëŒ€í•™ì›ì—ì„œ í”„ë¡œì íŠ¸ë¥¼ ìˆ˜í–‰í•˜ë©° YOLO ì•Œê³ ë¦¬ì¦˜ì„ ë¦¬ì„œì¹˜ë¥¼ í•œ ê²°ê³¼ êµ­ë‚´ ìžë£Œ ìˆ˜ ìžì²´ê°€ ë§Žì§€ ì•Šê³  ìžˆë‹¤ í•˜ë”ë¼ë„ ìžë£Œê°€ ê³¼ê±°ì˜ ë²„ì „ì— ë¨¸ë¬¼ëŸ¬ ìžˆìŠµë‹ˆë‹¤.    
 
 
-- ÄÚµåÀÇ ÀÇ¹Ì¿Í ¾îµð¸¦ °íÄ¡¸é custom data¸¦ TrainÇÏ°í ½ÇÁ¦ È°¿ëÇÒ ¼ö ÀÖ´ÂÁö TutorialÀ» Á¦°øÇÏ°í Functionº° ÇÑ±Û ÁÖ¼®À» »ý¼ºÇÏ´Â°ÍÀÌ º» ÇÁ·ÎÁ§Æ®ÀÇ ÃÖÁ¾ ¸ñÀûÀÔ´Ï´Ù.   
+- ì™¸êµ­ì˜ ìžë£Œë“¤ ì—­ì‹œ í˜„ìž¬ ë²„ì „ì—ì„œ ë™ìž‘í•˜ëŠ” ìžë£Œê°€ ë§Žì§€ ì•Šê³  íŒŒíŽ¸í™”ë˜ì–´ìžˆì–´ í•´ë‹¹ git repoë¥¼ í†µí•´ ìžë£Œë¥¼ í†µí•©í•˜ì—¬ ì œê³µí•˜ëŠ” ê²ƒì— 1ì°¨ ëª©ì ì„ ë‘ê³ ìž í•©ë‹ˆë‹¤.   
+
+
+- ì½”ë“œì˜ ì˜ë¯¸ì™€ ì–´ë””ë¥¼ ê³ ì¹˜ë©´ custom dataë¥¼ Trainí•˜ê³  ì‹¤ì œ í™œìš©í•  ìˆ˜ ìžˆëŠ”ì§€ Tutorialì„ ì œê³µí•˜ê³  Functionë³„ í•œê¸€ ì£¼ì„ì„ ìƒì„±í•˜ëŠ”ê²ƒì´ ë³¸ í”„ë¡œì íŠ¸ì˜ ìµœì¢… ëª©ì ìž…ë‹ˆë‹¤.   
 
 
 ----
-##±¸Á¶µµ
+##êµ¬ì¡°ë„
 ![img.png](img.png)
 
 ---
-## ÇÐ½À
+## í•™ìŠµ
 
 ~~~
 python train.py --img 640 --batch 4 --epochs 30 --data ./data/custom/custom.yaml --cfg ./models/custom_5m.yaml --weights ./weights/yolov5m.pt
 ~~~
 ---
 
-## °á°ú
+## ê²°ê³¼
 model : custom_5m  
 epochs: 100 epoch    
 
@@ -37,7 +38,7 @@ epochs: 100 epoch
 
 ----
 
-## ÂüÁ¶
+## ì°¸ì¡°
 yolov3(pytorch): https://github.com/ultralytics/yolov3
 
 
