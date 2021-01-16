@@ -50,10 +50,6 @@ yolov5(pytorch): https://github.com/ultralytics/yolov5
 
 
 ## Pre-Trained Data 
-yolov5m.pt download  
-$ python train.py --img 640 --batch 4 --epochs 30 --data ./data/custom/custom.yaml --cfg ./models/custom_5m_p2.yaml --weights 'weights/yolov5m.pt'
-'''
-
-## yolov5m.pt download
+yolov5m.pt download
 https://github.com/ultralytics/yolov5/releases/download/v3.0/yolov5m.pt
 
